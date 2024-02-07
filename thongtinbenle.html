@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="thongtinbenle.css">
+    <title>CÔNG TY TNHH MTV NHẬT HUY GROUP | Thông tin bền lề</title>
+</head>
+<body>
+    <header>
+        <div id="particles"></div>
+        <div class="info-text">
+            <h1>NHẬT HUY GROUP</h1>
+            <h3>Web Coding With Big Community</h3>
+            <a href="#about" class="scroll"><i class='bx bxs-down-arrow'></i></a>
+        </div>
+        <a href="index.html">
+            <button>
+                Trở lại
+            </button>
+        </a>
+    </header>
+    <section id="about">
+        <div class="header">
+            <h1>About it</h1>
+            <a href="#">Hire it</a>
+        </div>
+
+        <div class="card">
+            <img src="assets/img/logo.png">
+            <div class="info">
+                <h1>Tập đoàn Nhật Huy - Đối tác toàn cầu</h1>
+                <p>
+                    <strong>Được thành lập vào năm 2004, tập đoàn Nhật Huy được biết đến ban đầu với tư cách là nhà xuất khẩu bột cacbonat canxi. Gần 2 thập kỷ phát triển cùng những sự thay đổi của nền kinh tế Việt Nam, Nhật Huy vươn lên trở thành thương hiệu toàn cầu trong lĩnh vực sản xuất các sản phẩm phụ trợ công nghiệp và nguyên vật liệu xây dựng, là sự lựa chọn hàng đầu của hơn 60 quốc gia trên thế giới và tiếp tục phát triển con số này bằng cách không ngừng đầu tư vào công nghệ và con người.</strong>
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="header">
+            <h1>Features</h1>
+            <a href="#">See More</a>
+        </div>
+        <div class="feature-cards">
+            <div class="card">
+                <div class="info">
+                    <i class='bx bxs-devices'></i>
+                    <h1>Responsive Design</h1>
+                    <p>
+                        Explore a diverse collection of my creative endeavors, including web design, javascript and mini
+                        projects.
+                        Each project showcases my creativity, attention to detail, and passion for delivering visually
+                        stunning and
+                        engaging experiences.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="info">
+                    <i class='bx bx-code-alt'></i>
+
+                    <h1>Creative Projects</h1>
+                    <p>
+                        Behind the scenes, I pride myself on writing clean, efficient, and maintainable code. Learn more
+                        about my
+                        coding standards and practices that contribute to the functionality and performance of the
+                        projects I
+                        undertake.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="info">
+                    <i class='bx bxs-component'></i>
+                    <h1>Code Quality</h1>
+                    <p>
+                        Behind the scenes, I pride myself on writing clean, efficient, and maintainable code. Learn more
+                        about my
+                        coding standards and practices that contribute to the functionality and performance of the
+                        projects I
+                        undertake.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <button class="scroll-top" onclick="scrollToTop()">
+        <i class='bx bxs-up-arrow'></i>
+    </button>
+    <script>
+        particlesJS("particles", {
+    particles: {
+        number: {
+            value: 100,
+            density: {
+                enable: true,
+                value_area: 800
+            }
+        },
+        color: {
+            value: "#ffffff"
+        },
+        shape: {
+            type: "circle",
+            stroke: {
+                width: 0,
+                color: "#000000"
+            }
+        },
+        opacity: {
+            value: 0.8,
+            random: true,
+            animation: {
+                enable: true,
+                speed: 1,
+                opacity_min: 0,
+                sync: false
+            }
+        },
+        size: {
+            value: 3,
+            random: true
+        },
+        line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#ffffff",
+            opacity: 0.4,
+            width: 1
+        },
+        move: {
+            enable: true,
+            speed: 2,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+        }
+    },
+    interactivity: {
+        detectsOn: "canvas",
+        events: {
+            onHover: {
+                enable: true,
+                mode: "push"
+            },
+            onClick: {
+                enable: true,
+                mode: "push"
+            },
+            resize: true
+        },
+        modes: {
+            repulse: {
+                distance: 100,
+                duration: 0.4
+            },
+            push: {
+                particles_nb: 4
+            }
+        }
+    },
+    retina_detect: true
+});
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+    });
+}
+
+window.addEventListener('scroll', function () {
+    var scrollTopButton = document.querySelector('.scroll-top');
+    if (this.window.pageYOffset > 200) {
+        scrollTopButton.style.display = 'block';
+    } else {
+        scrollTopButton.style.display = 'none';
+    }
+});
+    </script>
+</body>
+</html>
