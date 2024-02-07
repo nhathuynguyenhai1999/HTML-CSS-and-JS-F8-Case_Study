@@ -46,7 +46,7 @@ header .info-text{
 header .info-text h1{
     font-size: 5rem;
     font-weight: 500;
-    font-family: 'Ubuntu';
+    font-family: 'Ubuntu', serif;
 }
 
 header .info-text h3{
@@ -157,7 +157,7 @@ header .info-text .scroll::before{
     color: #fff;
     font-size: 1.7rem;
     font-weight: bold;
-    font-family: 'Ubuntu';
+    font-family: 'Ubuntu', serif;
 }
 
 #about .card .info p, #features .card .info p{
