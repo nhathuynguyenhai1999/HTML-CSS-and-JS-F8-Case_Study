@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>CÔNG TY TNHH MTV NHẬT HUY GROUP | Tầm nhìn của sứ mệnh</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Heebo', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+img{
+    object-fit: cover;
+    object-position: top;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+nav{
+    padding: 20px 148px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+nav .logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav .logo img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+nav .logo a{
+    font-size: 15px;
+    color: #3e3e3e;
+    font-weight: bold;
+}
+
+nav .nav-links{
+    display: flex;
+    gap: 16px;
+}
+
+nav .nav-links a{
+    transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover,
+nav .nav-links a.selected{
+    color: #303f9f;
+}
+
+.main {
+    padding: 0 148px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    height: calc(100vh - 80px);
+}
+
+.main .info h1{
+    font-size: 44px;
+    margin-bottom: 40px;
+}
+
+.main .info p{
+    font-size: 16px;
+    margin-bottom: 45px;
+    width: 100%;
+}
+
+.main .info button,
+.content .post-list .post-item .buttons button{
+    padding: 10px 30px;
+    background: #303f9f;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.main .info button:hover,
+.content .post-list .post-item .buttons button:hover{
+    background: #1a237e;
+}
+
+.main img{
+    width: 400px;
+    height: 400px;
+    border-radius: 140px;
+}
+
+.recent{
+    padding: 60px 148px;
+    background-color: #dbedf2;
+}
+
+.recent .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.recent .header h4,
+.separator h4{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.recent .header a{
+    color: #303f9f;
+}
+
+.recent .posts{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.recent .posts .post-item{
+    background-color: #fff;
+    padding: 24px;
+    width: 460px;
+}
+
+.recent .posts .post-item h3,
+.content .post-list .post-item h3{
+    font-size: 26px;
+    margin-bottom: 18px;
+}
+
+.recent .posts .post-item .info,
+.content .post-list .post-item .info{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.recent .posts .post-item .info h5,
+.content .post-list .post-item h5{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.recent .posts .post-item p{
+    width: 400px;
+}
+
+.separator{
+    padding: 40px 148px 0;
+}
+
+.separator h4{
+    margin-bottom: 30px;
+}
+
+.featured{
+    padding: 40px 290px 0;
+}
+
+.featured .item,
+.works-list .item{
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.featured .item img,
+.works-list .item img{
+    width: 320px;
+    height: 200px;
+    border-radius: 6px;
+}
+
+.featured .item .details h3,
+.works-list .item h3{
+    font-size: 30px;
+    margin-bottom: 16px;
+}
+
+.featured .item .details .item-info,
+.works-list .item .details .item-info{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.featured .item .details .item-info .year-badge,
+.works-list .item .details .item-info .year-badge,
+.content .work-info .year-badge{
+    background-color: #303f9f;
+    padding: 2px 14px;
+    color: #fff;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.featured .item .details .item-info h4,
+.works-list .item .details .item-info h4{
+    color: #8695a4;
+    font-size: 18px;
+}
+
+.featured .item .details p,
+.works-list .item .details p{
+    width: 700px;
+    text-align: justify;
+}
+
+footer{
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .socials{
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-bottom: 20px;
+}
+
+footer .socials i{
+    font-size: 40px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+footer .socials i:hover{
+    color: #303f9f;
+}
+
+footer p{
+    font-size: 14px;
+}
+
+.page-title{
+    padding: 80px 234px 20px;
+    width: 100%;
+}
+
+.content{
+    padding: 30px 148px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content .work-info{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 970px;
+}
+
+.content .work-info .category{
+    color: #8695a4;
+    font-size: 18px;
+}
+
+.content>p{
+    width: 970px;
+    font-size: 15px;
+    margin: 20px 0;
+}
+
+.content>img{
+    width: 970px;
+    margin: 30px 0;
+    border-radius: 20px;
+}
+
+.content>h1,
+.content>h2,
+.content>h3{
+    width: 970px;
+}
+
+.content .post-list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content .post-list .post-item{
+    background-color: #dbedf2;
+    padding: 24px;
+    width: 960px;
+    border-radius: 10px;
+}
+
+.content .post-list .post-item .buttons{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.content .post-list .post-item .buttons button{
+    font-size: 14px;
+    padding: 6px 20px;
+}
+
+.content .post-list .post-item .buttons i{
+    font-size: 22px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.content .post-list .post-item .buttons i:hover{
+    color: #303f9f;
+}
+
+.content .container{
+    background-color: #dbedf2;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 970px;
+    border-radius: 20px;
+}
+
+.content .container img{
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+}
+
+.content .container h2{
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.content .container .about>p{
+    text-align: justify;
+}
+
+.content .container .about .email{
+    font-weight: bold;
+    margin-top: 30px;
+    font-size: 14px;
+}
+.paragraph-information {
+    margin: 20px 0;
+}
+
+@media screen and (max-width: 1400px) {
+    
+    nav{
+        padding: 20px 60px;
+    }
+
+    .main{
+        padding: 0 60px;
+    }
+
+    .recent{
+        padding: 60px;
+    }
+
+    .featured,
+    .separator{
+        padding: 40px 60px 0;
+    }
+
+    .page-title{
+        padding: 80px 60px 20px;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    
+    nav{
+        padding: 20px 40px;
+    }
+
+    .main{
+        padding: 0 40px;
+    }
+
+    .main img{
+        width: 340px;
+        height: 340px;
+    }
+
+    .recent{
+        padding: 40px;
+    }
+
+    .featured,
+    .separator{
+        padding: 40px 40px 0;
+    }
+
+    .featured .item .details p,
+    .works-list .item .details p{
+        width: 100%;
+    }
+
+    .page-title{
+        padding: 80px 40px 20px;
+    }
+
+    .content .work-info,
+    .content>p,
+    .content>img,
+    .content>h1,
+    .content>h2,
+    .content>h3,
+    .content .post-list .post-item,
+    .content .container{
+        width: 100%;
+    }
+
+    .content .container img{
+        width: 250px;
+        height: 250px;
+    }
+
+    .content .container h2{
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .content .container .about>p{
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+    
+    nav{
+        padding: 20px;
+    }
+
+    .main{
+        padding: 0 20px;
+    }
+
+    .main img{
+        width: 300px;
+        height: 300px;
+    }
+
+    .main .info h1{
+        font-size: 34px;
+    }
+
+    .main .info p{
+        font-size: 15px;
+    }
+
+    .main .info button{
+        font-size: 15px;
+        padding: 8px 22px;
+    }
+
+    .recent{
+        padding: 40px 20px;
+    }
+
+    .recent .posts .post-item{
+        width: 100%;
+    }
+
+    .recent .posts .post-item h3,
+    .content .post-list .post-item h3{
+        font-size: 20px;
+    }
+
+    .recent .posts .post-item .info h5,
+    .content .post-list .post-item .info h5{
+        font-size: 14px;
+    }
+
+    .recent .posts .post-item p{
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .featured,
+    .separator{
+        padding: 40px 20px 0;
+    }
+
+    .featured .item,
+    .works-list .item{
+        flex-direction: column;
+        padding: 0 20px 30px;
+    }
+
+    .featured .item img,
+    .works-list .item img{
+        width: 100%;
+        height: auto;
+    }
+
+    .featured .item .details h3,
+    .works-list .details .item h3{
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .featured .item .details .item-info .year-badge,
+    .works-list .item .details .item-info .year-badge{
+        font-size: 12px;
+    }
+
+    .featured .item .details .item-info h4,
+    .works-list .item .details .item-info h4{
+        font-size: 15px;
+    }
+
+    .featured .item .details p,
+    .works-list .item .details p{
+        font-size: 14px;
+    }
+
+    .content{
+        padding: 30px 20px 60px;
+    }
+
+    .content .container h2{
+        font-size: 20px;
+    }
+
+    .content .container .about>p{
+        font-size: 13px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    
+    nav{
+        justify-content: center;
+    }
+
+    nav .logo{
+        display: none;
+    }
+
+    .main{
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 40px 0;
+        height: auto;
+    }
+
+    .main .info h1{
+        font-size: 30px;
+        margin-bottom: 16px;
+    }
+
+    .main .info p{
+        margin-bottom: 16px;
+    }
+
+    .main .info button{
+        padding: 6px 20px;
+        font-size: 13px;
+    }
+
+    .main img{
+        margin-top: 20px;
+        width: 100%;
+        height: auto;
+        border-radius: 50px;
+    }
+
+    .recent .posts,
+    .content .container{
+        flex-direction: column;
+    }
+
+    .content .container img{
+        width: 100%;
+        height: auto;
+    }
+
+}
+</style>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="assets/img/logo.png" alt="">
+            <a href="index.html">CÔNG TY TNHH MTV NHẬT HUY GROUP</a>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Trang chủ</a>
+            <a href="thongtinbenle.html">Thông tin bên lề</a>
+            <a href="mathang.html">Mặt hàng</a>
+            <a href="Other.html">Khác</a>
+            <a href="lichsuphattrien.html">Lịch sử phát triển</a>
+            <a href="loichao.html">Lời chào của Tổng giám đốc</a>
+        </div>
+    </nav>
+    <h1 class="page-title">Tầm nhìn - Sứ mệnh</h1>
+
+
+    <div class="content">
+        <div class="work-info">
+            <div class="year-badge">2024</div>
+            <div class="category">
+                <p>Sứ mệnh của chúng tôi là lan toả giá trị niềm vui lao động và niềm tin lạc quan tới tập thể nhân viên tập đoàn và toàn thể quý khách hàng trong nền công nghiệp quốc tế</p>
+            </div>
+        </div>
+
+        <p>Tầm nhìn của chúng tôi là trở thành một thương hiệu bền vững, một nhà sản xuất & xuất khẩu hàng đầu thế giới với chuỗi sản phẩm công nghiệp đa dạng cho mọi người và các doanh nghiệp toàn cầu.</p>
+
+        <img src="assets/img/vision-and-mission--770x515.png">
+
+        <h1>SỨ MỆNH</h1>
+        <h2>TẦM NHÌN</h2>
+        <h3>GIÁ TRỊ CỐT LÕI</h3>
+
+        <p>Ngay từ những ngày đầu thành lập, tập đoàn Nhật Huy luôn coi những giá trị cốt lõi là kim chỉ nam cho mọi hoạt động. Những nguyên tắc đó hướng dẫn cách ứng xử nội bộ trong tập đoàn cũng như mối quan hệ của chúng tôi với khách hàng.
+            Bộ Giá trị cốt lõi này giúp hỗ trợ tầm nhìn, hình thành văn hóa và thể hiện chúng tôi là một tập đoàn chuyên nghiệp.
+        </p>
+
+        <img src="assets/img/vision-and-mission--770x515.png">
+
+    </div>
+
+    <div class="paragraph-information">
+       <p>
+        -Tinh thần bền bỉ được bắt nguồn trong chính những giá trị sản xuất công nghiệp
+        Tinh thần bền bỉ trong từng cột mốc lịch sử: Xuất phát từ nhà máy bột đá tại Nghệ An, với những chiến lược kinh doanh và tinh thần bền bỉ không bỏ cuộc, tới hiện tại, tập đoàn Nhật Huy đã mở rộng quy mô sản xuất và kinh doanhS với 10 nhà máy trong 2 lĩnh vực VLXD và phụ trợ công nghiệp nhựa. 
+    Tinh thần bền bỉ trong văn hóa sáng tạo, học hỏi: Đề cao văn hoá sáng tạo và tận tuỵ, hợp tác & chia sẻ để đẩy mạnh các giá trị công nghiệp.
+Tinh thần bền bỉ qua hành động biến những thách thức thành cơ hội: Đương đầu với nghịch cảnh, khẳng định qua tinh thần bền bỉ. Bất chấp thời điểm bất ổn chưa từng có, tập đoàn Nhật Huy luôn thể hiện thái độ kiên quyết, tinh thần quyết tâm, tự nguyện và khả năng thích ứng nhanh nhẹn trước những biến động khó lường của thị trường và dịch bệnh.
+       </p>
+       <p>-Tinh thần làm việc theo nguyên tắc win-win: Tại tập đoàn Nhật Huy, thái độ cộng tác từ hai bên dựa trên nguyên lý Thắng- Thắng (win-win) là nguyên tắc quan trọng trong tinh thần làm việc tại văn phòng cũng như khi giao tiếp với khách hàng. Win-Win đảm bảo cho kết quả hợp tác bền vững hơn. Ngoài ra, các nhà máy của NHG hầu hết được đặt tại các khu công nghiệp Nghệ An và Phú Thọ, tạo công ăn việc làm cho hàng nghìn người lao động, kinh tế địa phương cũng được bồi đắp. Đây chính là cuộc trao đổi đôi bên cùng có lợi, nhất là trong bối cảnh dịch Covid-19 khiến nhân sự và chuyên gia trong nước & nước ngoài gặp khó khi di chuyển, trao đổi giữa các quốc gia.</p>
+       <p>
+        -Tinh thần bảo vệ môi trường: Tôn trọng và bảo vệ môi trường thông qua cách thức sản xuất áp dụng công nghệ tiên tiến để tạo ra những sản phẩm chất lượng & an toàn, giảm phát khí thải, chuyển đổi xanh v.v
+-Tinh thần chia sẻ cộng đồng: Nhật Huy luôn chia sẻ lợi ích doanh nghiệp với việc đồng hành cùng cộng đồng trong các hoạt động thiện nguyện xã hội góp phần xây dựng một xã hội văn minh và tốt đẹp.
+       </p>     
+    </div>
+
+    <footer>
+        <div class="socials">
+            <i class='bx bxl-facebook-square'></i>
+            <i class='bx bxl-instagram'></i>
+            <i class='bx bxl-twitter'></i>
+            <i class='bx bxl-linkedin-square'></i>
+        </div>
+        <p>Copyright ©2024, All rights reserved.</p>
+    </footer>
+</body>
+</html>
