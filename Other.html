@@ -7,737 +7,895 @@
     <title>CÔNG TY TNHH MTV NHẬT HUY GROUP | Thông tin khác</title>
 </head>
 <style>
-    *{
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    body{
-    height: 100vh;
-    background: #212529;
+    font-family: 'Roboto', sans-serif;
 }
 
-.navbar{
+a{
+    text-decoration: none;
+    color: #1c1e53;
+    transition: color 0.3s ease;
+}
+
+a:hover{
+    color: #5e3bee !important;
+}
+
+h5{
+    font-size: 20px;
+}
+
+li{
+    list-style: none;
+}
+
+nav{
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    padding: 0 85px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 80px;
-    padding: 0 50px;
+    box-shadow: 0 5px 80px rgba(0, 0, 0, 0.1);
 }
 
-.navbar h2{
-    color: #ffb742;
-    font-weight: 600;
-}
-
-.navbar ul{
+nav .logo,
+footer .logo{
     display: flex;
+    align-items: center;
 }
 
-.navbar ul li{
-    list-style: none;
+nav .logo a,
+footer .logo a{
+    margin-left: 8px;
+    font-weight: bold;
+    font-size: 20px;
 }
 
-.navbar ul li a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    margin-right: 25px;
-    transition: color 0.3s ease;
+nav .logo img,
+footer .logo img{
+    width: 40px;
+    height: 40px;
 }
 
-.navbar ul li:hover a{
-    color: #ffb742;
+nav ul,
+footer .top ul{
+    display: flex;
+    gap: 40px;
 }
 
-.navbar ul li:last-child a{
-    margin: 0;
-}
-
-.hire-btn{
-    background: #ffb742;
-    padding: 6px 30px;
-    border: none;
-    font-size: 16px;
+nav button{
+    color: #1c1e53;
+    background-color: transparent;
+    padding: 12px 16px;
+    border-radius: 5px;
+    border: 1px solid #1c1e53;
     cursor: pointer;
-    border-radius: 6px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-.hire-btn:hover{
-    background: #fb8c00;
+nav button:hover{
+    background-color: #5e3bee;
+    border-color: #5e3bee;
+    color: #fff;
+}
+
+nav button#menuButton{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    padding: 7px;
 }
 
 .main{
-    height: 640px;
+    background-color: #deebee;
+    padding: 90px 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.main .left{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.main h4{
-    font-size: 32px;
-    color: #fff;
-    font-weight: 600;
-}
-
-.main h4 span{
-    color: #ffb742;
-    text-decoration: underline;
-}
-
-.main p.title{
-    font-size: 44px;
-    font-weight: 600;
-    color: #fff;
-    margin-top: 8px;
-}
-
-.main p.subtitle{
-    font-size: 16px;
-    color: #ccc;
-    margin-top: 20px;
-}
-
-.main img{
-    width: 200px;
-    height: 200px;
-    margin-top: 100px;
-}
-
-.guarantee{
-    margin-top: 50px;
-    padding: 0 50px;
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 24px;
-}
-
-.guarantee .item{
-    background: #292b2e;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    width: 100%;
-    border-radius: 10px;
-    padding: 0 30px;
-    border: 1px solid transparent;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.guarantee .item:hover{
-    border-color: #ffb742;
-}
-
-.guarantee .item .icon{
-    width: 46px;
-    height: 46px;
-    background: #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease;
-}
-
-.guarantee .item:hover .icon{
-    background-color: #ffb742;
-}
-
-.guarantee .item .icon i{
-    font-size: 30px;
-}
-
-.guarantee .item .info{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.guarantee .item .info h3{
-    color: #ffb742;
-    font-size: 28px;
-}
-
-.guarantee .item .info p{
-    color: #fff;
-    font-size: 15px;
-    font-weight: 600;
-}
-
-.guarantee .item > i{
-    color: #fff;
-    font-size: 30px;
-    transition: color 0.3s ease;
-}
-
-.guarantee .item:hover > i{
-    color: #ffb742;
-}
-
-.seprator{
-    margin: 50px 50px 30px;
-    padding: 10px 20px;
-    background: rgba(255, 255, 255, 0.08);
-    display: inline-block;
-    color: #ffb742;
-    border-radius: 12px;
-}
-
-.about{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 80px;
-    padding: 0 50px;
-}
-
-.about img{
-    width: 280px;
-}
-
-.about .info h3{
-    color: #fff;
-    font-size: 32px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.about .info p{
-    color: #ccc;
-    font-size: 14px;
-}
-
-.about .info button{
-    margin-top: 30px;
-}
-
-.skills{
-    display: flex;
-    justify-content: space-around;
-    padding: 0 50px;
-}
-
-.skills .left{
-    width: 680px;
-}
-
-.skills .left .info h3{
-    color: #fff;
-    font-size: 30px;
-    margin-bottom: 20px;
-}
-
-.skills .left .info p{
-    color: #ccc;
-    font-size: 14px;
-}
-
-.skills .left button{
-    margin-top: 30px;
-}
-
-.skills .right{
-    width: 420px;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-}
-
-.skills .right .item{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #383e45;
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
-}
-
-.skills .right .item i{
-    font-size: 34px;
-    color: #fff;
-}
-
-footer{
-    position: relative;
-    background: #1c1c1c;
-    padding: 80px 50px 40px;
-    margin-top: 100px;
-}
-
-footer .start{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    position: absolute;
-    background-color: #ffb742;
-    padding: 30px 25px;
-    border-radius: 15px;
-    width: 70%;
-    top: -16%;
-    left: 15%;
-}
-
-footer .start p{
-    font-size: 13px;
-    width: 35%;
-}
-
-footer .start button{
-    background: transparent;
-    border: 1px solid #000;
-    cursor: pointer;
-    padding: 8px 20px;
-    border-radius: 100px;
-    transition: all 0.3s ease;
-}
-
-footer .start button:hover{
-    background-color: #fff;
-    border-color: #fff;
-}
-
-footer .cols{
-    display: flex;
     align-items: start;
 }
 
-footer .cols .about-col{
-    flex: 3;
+.main .left h3{
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 46px;
 }
 
-footer .cols .about-col h3{
-    color: #ffb742;
-    margin-bottom: 20px;
+.main .left h3 span{
+    color: #5e3bee;
 }
 
-footer .cols .about-col p{
-    color: #ccc;
-    font-size: 13px;
-}
-
-footer .cols .links-col{
-    flex: 3;
-}
-
-footer .cols .links-col h4, footer .cols .news-col h4{
-    color: #fff;
-    margin-bottom: 20px;
-}
-
-footer .cols .links-col a{
-    display: block;
-    text-decoration: none;
-    color: #7b7b7b;
-    font-size: 14px;
-    line-height: 26px;
-    transition: color 0.3s ease;
-}
-
-footer .cols .links-col a:hover{
-    color: #ffb742;
-}
-
-footer .cols .news-col{
-    flex: 3;
-}
-
-footer .cols .news-col p{
-    color: #7b7b7b;
-    font-size: 15px;
-}
-
-footer .cols .news-col form{
-    width: 100%;
+.main .left p{
+    color: #1c1e53;
+    font-size: 22px;
     margin-top: 20px;
-    position: relative;
 }
 
-footer .cols .news-col form input{
-    width: 100%;
-    background: #212529;
-    border: none;
-    padding: 13px;
-    border-radius: 100px;
-    font-weight: 400;
-    font-size: 13px;
+.main .left button{
+    margin-top: 40px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #5e3bee;
+    padding: 14px 24px;
+    border: 1px solid transparent;
+    border-radius: 5px;
 }
 
-footer .cols .news-col form button{
+.main .right img{
+    width: 500px;
+}
+
+.skills{
+    padding: 110px 85px 0;
+}
+
+.skills h3,
+.about .right h3,
+.portfolio .header h3,
+.feedback h3{
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+.skills .skill-items{
+    display: flex;
+    margin-top: 70px;
+    gap: 30px;
+}
+
+.skills .skill-items .item{
+    background-color: #deebee;
+    width: 25%;
+    border-radius: 10px;
+    padding: 32px;
+    border-bottom: 4px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.skills .skill-items .item:hover{
+    border-color: #5e3bee;
+}
+
+.skills .skill-items .item .icon{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 45px;
-    height: 45px;
-    background: #ffb742;
-    border: none;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    right: 0;
+    background-color: #fff;
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    margin-bottom: 22px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+}
+
+.skills .skill-items .item .icon i{
+    font-size: 26px;
+    color: #006b6a;
+}
+
+.skills .skill-items .item h4,
+.portfolio .portfo-items .item .info h4{
+    font-size: 18px;
+}
+
+.skills .skill-items .item p{
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 22px;
+    color: #1c1e53;
+}
+
+.about{
+    padding: 110px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.about .left{
+    background-color: #deebee;
+    border-radius: 10px 10px 0 0;
+}
+
+.about .left img{
+    width: 440px;
+}
+
+.about .right p{
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.portfolio{
+    background-color: #deebee;
+    padding: 110px 85px;
+}
+
+.portfolio .header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.portfolio .header button{
+    background-color: #ff0000;
+    padding: 10px 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    gap: 8px;
+    border: none;
+    border-radius: 10px;
 }
 
-footer .cols .news-col form button:hover{
-    background-color: #fb8c00;
-}
-
-footer .cols .news-col form button i{
+.portfolio .header button i{
     font-size: 26px;
 }
 
-@media screen and (max-width: 1100px) {
-    .guarantee{
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .guarantee .item{
-        flex-basis: 49%;
-    }
-
-    .skills{
-        justify-content: space-between;
-        gap: 20px;
-    }
-
-    .skills .left{
-        width: 500px;
-    }
-
-    .skills .left .info h3{
-        font-size: 22px;
-    }
-
-    .skills .left .info p{
-        font-size: 12px;
-    }
-
-    footer{
-        margin-top: 150px;
-    }
-
-    footer .start{
-        width: 90%;
-        left: 5%;
-        top: -20%;
-    }
-
-    footer .cols{
-        flex-wrap: wrap;
-    }
-
-    footer .cols .about-col{
-        flex-basis: 50%;
-    }
-
-    footer .cols .links-col{
-        flex-basis: 50%;
-    }
-
-    footer .cols .news-col{
-        flex-basis: 50%;
-    }
-
+.portfolio .portfo-items{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-@media screen and (max-width: 780px) {
-    
-    .navbar button{
-        display: none;
-    }
-
-    .main h4{
-        font-size: 24px;
-    }
-
-    .main p.title{
-        font-size: 36px;
-    }
-
-    .main p.subtitle{
-        font-size: 14px;
-    }
-
-    .guarantee .item{
-        flex-basis: 100%;
-    }
-
-    .about{
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
+.portfolio .portfo-items .item{
+    width: 30%;
+    background-color: #fff;
+    border-radius: 10px;
+    border-bottom: 4px solid transparent;
+    cursor: pointer;
+    box-shadow: 0 5px 32px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 650px) {
-    
-    .navbar{
-        justify-content: center;
-    }
-
-    .navbar h2{
-        display: none;
-    }
-
-    .navbar ul li a{
-        font-size: 14px;
-    }
-
-    .main{
-        margin-top: 50px;
-        height: 320px;
-        justify-content: start;
-    }
-
-    .main h4{
-        font-size: 20px;
-    }
-
-    .main p.title{
-        font-size: 28px;
-    }
-
-    .main p.subtitle{
-        font-size: 12px;
-    }
-
-    .main img{
-        margin-top: 40px;
-        width: 150px;
-        height: 150px;
-    }
-
-    .skills{
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .skills .right{
-        justify-content: space-between;
-    }
-
-    .skills .left .info h3{
-        font-size: 20px;
-    }
-
-    footer .start{
-        top: -8%;
-    }
-
-    footer .start p{
-        display: none;
-    }
-
-    footer .cols .about-col{
-        flex-basis: 100%;
-        margin-bottom: 40px;
-    }
-
-    footer .cols .links-col{
-        flex-basis: 100%;
-        margin-bottom: 20px;
-    }
-
-    footer .cols .news-col{
-        flex-basis: 100%;
-    }
-
+.portfolio .portfo-items .item:hover{
+    border-color: #5e3bee;
 }
 
-@media screen and (max-width: 480px) {
+.portfolio .portfo-items .item img{
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10px 10px 20px 20px;
+}
+
+.portfolio .portfo-items .item .info{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px 32px 42px;
+}
+
+.portfolio .portfo-items .item .info p{
+    font-size: 13px;
+}
+
+.portfolio .portfo-items .item .info a{
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-color: #5e3bee;
+}
+
+.portfolio .portfo-items .item .info a i{
+    margin-left: 2px;
+    font-size: 16px;
+}
+
+.feedback{
+    padding: 110px 85px;
+}
+
+.feedback .customers{
+    margin-top: 50px;
+    display: flex;
+    gap: 40px;
+}
+
+.feedback .customers .item{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 2px solid #006b6a;
+    border-radius: 10px;
+    padding: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.feedback .customers .item .rating{
+    color: #006b6a;
+    font-size: 22px;
+}
+
+.feedback .customers .item:hover{
+    border-color: #5e3bee;
+}
+
+.feedback .customers .item p{
+    line-height: 22px;
+    font-size: 14px;
+}
+
+.feedback .customers .item .user{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.feedback .customers .item .user img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.feedback .customers .item .user h5{
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+.feedback .customers .item .user p{
+    font-size: 12px;
+}
+
+footer{
+    background-color: #deebee;
+    padding: 85px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .top,
+footer .bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .top .social-links{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 22px;
+}
+
+footer .separator{
+    width: 100%;
+    height: 1px;
+    background-color: #282938;
+    margin: 30px 0 20px;
+}
+
+footer .bottom p{
+    font-size: 12px;
+}
+
+footer .bottom .links a{
+    font-size: 12px;
+    margin-left: 14px;
+}
+
+@media screen and (max-width: 1200px) {
     
-    .main p.title{
+    .main .left h5{
         font-size: 18px;
     }
 
-    .main p.subtitle{
-        font-size: 10px;
+    .main .left h3{
+        font-size: 36px;
     }
 
-    .guarantee .item .info h3{
+    .main .left p{
+        font-size: 18px;
+    }
+
+    .main .right img{
+        width: 380px;
+    }
+
+    .skills .skill-items{
+        gap: 10px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .skills .skill-items .item{
+        width: 49%;
+    }
+
+    .about .left img{
+        width: 370px;
+    }
+
+    .skills h3,
+    .about .right h3,
+    .portfolio .header h3,
+    .feedback h3{
+        font-size: 32px;
+    }
+
+    .about .right p{
+        font-size: 15px;
+    }
+
+    .feedback .customers .item .rating{
         font-size: 20px;
     }
 
-    .guarantee .item .info p{
-        font-size: 12px;
+    .feedback .customers .item p{
+        font-size: 13px;
+    }
+
+    footer .top ul{
+        gap: 20px;
     }
 
 }
+
+@media screen and (max-width: 992px) {
+    
+    nav button{
+        display: none;
+    }
+
+    nav ul{
+        gap: 20px;
+    }
+
+    nav ul li a{
+        font-size: 15px;
+    }
+
+    .main{
+        flex-direction: column;
+    }
+
+    .about{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .portfolio .portfo-items{
+        gap: 22px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .portfolio .portfo-items .item{
+        width: 48%;
+    }
+
+    .feedback .customers{
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .feedback .customers .item{
+        width: 48%;
+    }
+
+    footer .top ul{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    
+    nav{
+        justify-content: space-between;
+        padding: 0 42px;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+    nav.open .logo{
+        display: none;
+    }
+
+    nav.open ul{
+        display: flex;
+    }
+
+    nav button#menuButton{
+        display: flex;
+    }
+
+    .main{
+        padding: 42px;
+    }
+
+    .skills{
+        padding: 85px 42px 0;
+    }
+
+    .skills .skill-items{
+        gap: 8px;
+    }
+
+    .about{
+        padding: 85px 42px;
+    }
+
+    .portfolio{
+        padding: 60px 42px;
+    }
+
+    .portfolio .portfo-items{
+        gap: 18px;
+    }
+
+    .feedback{
+        padding: 85px 42px;
+    }
+
+    footer{
+        padding: 85px 42px;
+    }
+
+    footer .bottom{
+        flex-direction: column-reverse;
+        gap: 14px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    
+    nav ul li a{
+        font-size: 13px;
+    }
+
+    nav .logo a{
+        font-size: 18px;
+    }
+
+    .main .left h3{
+        font-size: 32px;
+    }
+
+    .main .left p{
+        font-size: 16px;
+    }
+
+    .main .left button{
+        width: 100%;
+    }
+
+    .skills .skill-items .item{
+        width: 100%;
+    }
+
+    .portfolio .header button{
+        font-size: 12px;
+        padding: 8px 14px;
+    }
+
+    .portfolio .portfo-items .item{
+        width: 80%;
+    }
+
+    .feedback .customers .item{
+        width: 100%;
+    }
 }
 </style>
 <body>
-    <div class="navbar">
-        <h2>CÔNG TY TNHH MTV NHẬT HUY GROUP</h2>
+    <nav>
+        <div class="logo">
+            <img src="assets/img/logo.png">
+            <a href="https://github.com/nhathuynguyenhai1999/HTML-CSS-and-JS-F8-Case_Study" target="_blank">CÔNG TY TNHH MTV NHẬT HUY GROUP</a>
+        </div>
         <ul>
             <li class="link"><a href="index.html">Trang chủ</a></li>
             <li id="link1" class="link"><a href="thongtinbenle.html">Thông tin bên lề</a></li>
             <li id="link2" class="link"><a href="mathang.html">Mặt hàng</a></li>
             <li id="link3" class="link"><a href="Other.html">Khác</a></li>
         </ul>
-        <button class="hire-btn">Hire Me</button>
-    </div>
-    <div class="main">
-        <h4>Hãy đến với mặt hàng đặc biệt từ <span>CÔNG TY TNHH MTV NHẬT HUY GROUP</span></h4>
-        <p class="title">Nhật Huy Group có hơn mười nhà máy với mạng lưới sản xuất sản phẩm rộng khắp Việt Nam.
+        <button>Contact Me</button>
+        <button id="menuButton" onclick="openMenu()">
+            <i class='bx bx-menu'></i>
+        </button>
+    </nav>
+
+    <div class="main" id="main">
+        <div class="left">
+            <h5>Hãy đến với mặt hàng đặc biệt từ</h5>
+            <h3>CÔNG TY TNHH <span>MTV NHẬT HUY GROUP</span> and brand experience</h3>
+            <p>
+                Nhật Huy Group có hơn mười nhà máy với mạng lưới sản xuất sản phẩm rộng khắp Việt Nam.
             Với sự nhạy bén, thông minh của người lãnh đạo, sở hữu đội ngũ kỹ thuật - kinh doanh lành nghề cùng khả năng tài chính vượt trội,
             Tập đoàn Nhật Huy mang đến những sản phẩm và dịch vụ hoàn thiện theo yêu cầu của khách hàng bằng cách phát triển các sản phẩm công nghiệp hóa khác nhau như bột cacbonat canxi,
-            bột độn, hợp chất PVC, gỗ keo, đá tự nhiên, đá phiến thạch anh, và đá chế tạo thạch anh.</p>
-        <p class="subtitle">Tập đoàn Nhật Huy được thành lập năm 2004 với tư cách ban đầu là Nhà xuất khẩu bột canxi cacbonat. 
-            Đại diện một nhà sản xuất đến từ Việt Nam, Nhật Huy đã để lại những dấu ấn phát triển nổi bật trên trường quốc tế với những thành tích xuất sắc ở các hạng mục sản phẩm:
-            Bột cacbonat canxi, vật liệu hỗ trợ nhựa, gỗ keo đá tự nhiên và đá thạch anh. Trên tiến trình phát triển của mình,
-            Nhật Huy đã và đang tiếp tục xuất khẩu ra nước ngoài các sản phẩm vật liệu nhựa và đá xây dựng cho toàn thế giới.</p>
-        <img src="assets/img/309181549_434232198813513_1418263637694919973_n.jpg">    
-    </div>
-    <div class="guarantee">
-        <div class="item">
-            <div class="icon">
-                <i class='bx bx-check-shield'></i>
-            </div>
-            <div class="info">
-                <h3>+5</h3>
-                <p>Years Of Experiences</p>
-            </div>
-            <i class='bx bx-chevron-right'></i>
-        </div>
-        <div class="item">
-            <div class="icon">
-                <i class='bx bx-check-circle'></i>
-            </div>
-            <div class="info">
-                <h3>+100</h3>
-                <p>Completed Projects</p>
-            </div>
-            <i class='bx bx-chevron-right'></i>
-        </div>
-        <div class="item">
-            <div class="icon">
-                <i class='bx bx-laugh'></i>
-            </div>
-            <div class="info">
-                <h3>+50</h3>
-                <p>Happy Clients</p>
-            </div>
-            <i class='bx bx-chevron-right'></i>
-        </div>
-    </div>
-    <h5 class="seprator">Who I Am</h5>
-    <div class="about">
-        <img src="assets/img/logo.png">
-        <div class="info">
-            <h3>About Me</h3>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque eveniet vitae fugit accusamus, cupiditate
-                labore quae officia sunt enim consectetur eligendi sit mollitia iste doloribus libero odio, quidem optio
-                autem!
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque eveniet vitae fugit accusamus,
-                cupiditate labore quae officia sunt enim consectetur eligendi sit mollitia iste doloribus libero odio,
-                quidem optio autem!
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque eveniet vitae fugit accusamus,
-                cupiditate labore quae officia sunt enim consectetur eligendi sit mollitia iste doloribus libero odio,
-                quidem optio autem!
+            bột độn, hợp chất PVC, gỗ keo, đá tự nhiên, đá phiến thạch anh, và đá chế tạo thạch anh.
             </p>
-            <button class="hire-btn">Hire Me</button>
-        </div>
-    </div>
-    <h5 class="seprator">My Skills</h5>
-    <div class="skills">
-        <div class="left">
-            <div class="info">
-                <h3>Về Tập đoàn?</h3>
-                <p>
-                    Chúng tôi sẽ có những thích ứng kịp thời nhưng vẫn đảm bảo tính ổn định trong môi trường thương mại quốc tế đang thay đổi nhanh chóng,
-                    song song với phát triển các lĩnh vực kinh doanh mới để chuẩn bị cho việc cất cánh trong tương lai
-                </p>
-            </div>
-            <button class="hire-btn">Hire Me</button>
+            <button>Get In Touch</button>
         </div>
         <div class="right">
+            <img src="assets/img/banner-01-1920x950-1.jpg.webp">
+        </div>
+    </div>
+
+    <div class="skills" id="skills">
+        <h5>My Skills</h5>
+        <h3>My Expertise</h3>
+        <div class="skill-items">
             <div class="item">
-                <i class='bx bxl-html5'></i>
+                <div class="icon"><i class='bx bx-directions'></i></div>
+                <h4>Strategy & Direction</h4>
+                <p>
+                Tập đoàn Nhật Huy được thành lập năm 2004 với tư cách ban đầu là Nhà xuất khẩu bột canxi cacbonat. 
+            Đại diện một nhà sản xuất đến từ Việt Nam, Nhật Huy đã để lại những dấu ấn phát triển nổi bật trên trường quốc tế với những thành tích xuất sắc ở các hạng mục sản phẩm:
+            Bột cacbonat canxi, vật liệu hỗ trợ nhựa, gỗ keo đá tự nhiên và đá thạch anh. Trên tiến trình phát triển của mình,
+            Nhật Huy đã và đang tiếp tục xuất khẩu ra nước ngoài các sản phẩm vật liệu nhựa và đá xây dựng cho toàn thế giới.
+                </p>
             </div>
             <div class="item">
-                <i class='bx bxl-css3'></i>
+                <div class="icon"><i class='bx bx-bookmark-heart'></i></div>
+                <h4>Branding & Logo</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique.
+                </p>
             </div>
             <div class="item">
-                <i class='bx bxl-typescript'></i>
+                <div class="icon"><i class='bx bxl-figma'></i></i></div>
+                <h4>UI & UX Design</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique.
+                </p>
             </div>
             <div class="item">
-                <i class='bx bxl-git'></i>
-            </div>
-            <div class="item">
-                <i class='bx bxl-bootstrap'></i>
-            </div>
-            <div class="item">
-                <i class='bx bxl-php'></i>
-            </div>
-            <div class="item">
-                <i class='bx bxl-sass'></i>
-            </div>
-            <div class="item">
-                <i class='bx bxl-tailwind-css'></i>
-            </div>
-            <div class="item">
-                <i class='bx bxl-mongodb'></i>
-            </div>
-            <div class="item">
-                <i class='bx bxl-graphql'></i>
-            </div>
-            <div class="item">
-                <i class='bx bxl-jquery'></i>
-            </div>
-            <div class="item">
-                <i class='bx bxl-angular'></i>
+                <div class="icon"><i class='bx bx-code-alt'></i></i></div>
+                <h4>Webflow Coding</h4>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique.
+                </p>
             </div>
         </div>
     </div>
-    <footer>
-        <div class="start">
-            <h3>Start a project</h3>
-            <p>Interested in working together? We should queue up a chat. I’ll buy the coffee.</p>
-            <button>Let's do this</button>
+
+    <div class="about" id="about">
+        <div class="left">
+            <img src="assets/img/38cc7d9c8fdc0f197942d6a27620679a.jpg">
         </div>
-        <div class="cols">
-            <div class="about-col">
-                <h3>CÔNG TY TNHH MTV NHẬT HUY GROUP.</h3>
-                <p>Creative FullStack Developer.</p>
-            </div>
-            <div class="links-col">
-                <h4>Useful Links</h4>
-                <a href="index.html">Home</a>
-                <a href="lichsuphattrien.html">Lịch sử phát triển</a>
-                <a href="loichao.html">Lời chào</a>
-                <a href="mathang.html">Mặt Hàng</a>
-                <a href="tamnhinsumenh.html">Tầm nhìn của sứ mệnh</a>
-            </div>
-            <div class="links-col">
-                <h4>Social Media</h4>
-                <a href="#">Instagram</a>
-                <a href="#">Linkedin</a>
-                <a href="#">Dribble</a>
-                <a href="#">Youtube</a>
-                <a href="#">Github</a>
-            </div>
-            <div class="news-col">
-                <h4>NewsLetter</h4>
-                <p>Enter your email and get notified about news, of.</p>
+        <div class="right">
+            <h5>About</h5>
+            <h3>About Me</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet
+                augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis. Nibh scelerisque ac
+                adipiscing velit non nulla in amet pellentesque.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                tristique.
+            </p>
+            <p>
+                Sit turpis pretium eget maecenas. Vestibulum dolor mattis consectetur eget commodo vitae. Amet
+                pellentesque sit pulvinar lorem mi a, euismod risus r.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                tristique.
+            </p>
+        </div>
+    </div>
 
-                <form>
-                    <input type="email" placeholder="Your email address">
-                    <button><i class='bx bxl-telegram'></i></button>
-                </form>
-
+    <div class="portfolio" id="portfolio">
+        <div class="header">
+            <div class="info">
+                <h5>Recent Projects</h5>
+                <h3>My Portfolio</h3>
             </div>
+            <button><i class='bx bxl-youtube'></i> Visit My Youtube</button>
+        </div>
 
+        <div class="portfo-items">
+            <div class="item">
+                <img src="assets/img/vhs-sample-01.jpg">
+                <div class="info">
+                    <h4>Đá tự nhiên #3</h4>
+                    <p>
+                        Được thành lập từ năm 2017, Viet Home Stone là công ty hàng đầu Việt Nam chuyên sản xuất và xuất khẩu đá tự nhiên, tiếp nối chặng đường gần 20 năm sản xuất và xuất khẩu đá tự nhiên của Nhật Huy.
+                        Công ty có mỏ đá riêng và hàng trăm công nhân cùng với 3 nhà máy và một số phân xưởng ở tỉnh Nghệ An và Thanh Hóa, hai khu vực có nhiều mỏ đá ở miền Trung Việt Nam. Sở hữu những dây chuyền sản xuất hiện đại,
+                        đội ngũ nhân viên lành nghề chuyên nghiệp, khả năng đóng gói, bốc xếp, khử trùng theo tiêu chuẩn của khách hàng, mối quan hệ tốt với nhiều công ty vận chuyển, Viet Home Stone luôn cung cấp cho khách hàng những sản phẩm chất lượng tốt, giá cả cạnh tranh, dịch vụ tốt và giao hàng đúng hẹn.
+                        Sản phẩm đá tự nhiên của tập đoàn Nhật Huy trở thành thương hiệu uy tín và được thị trường các nước như: Mỹ, Úc, Châu Âu, Châu Á… ưa chuộng. Sản phẩm đá tự nhiên tại Viet Home Stone đa dạng với các biến thể của màu sắc, kiểu vân đá và kích thước. Nhà máy Viet Home Stone với tổng diện tích lên tới 45.000m2, sản lượng phát triển đều đặn với năng suất hiện tại đang là 50 conts / tháng.
+                        Sản phẩm chính của chúng tôi bao gồm: Đá cẩm thạch trắng tinh khiết, Đá cẩm thạch vàng, Đá paving, Đá ốp tường, Đá ong và Đá mỹ nghệ.
+                        Với mục tiêu: “Mang đến cho khách hàng những sản phẩm chất lượng nhất, giá thành cạnh tranh và dịch vụ tốt”, đá tự nhiên của tập đoàn Nhật Huy luôn sẵn sàng đáp ứng mọi thị trường quốc tế. Các đối tác của chúng tôi bao gồm chuỗi siêu thị Stone, nhà sản xuất, nhà thầu và các công ty Thương mại lớn. Hiện tại, Viet Home Stone cũng như Nhật Huy Group luôn mở rộng cơ hội hợp tác phát triển toàn diện cho các đối tác bằng những chính sách giá, chính sách đại lý hấp dẫn.
+                    </p>
+                    <a href="mathang.html">Bấm vào xem mặt hàng<i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/img/vhs-sample-01.jpg">
+                <div class="info">
+                    <h4>Simple Naturation Ice</h4>
+                    <p>
+                        Sản phẩm đá tự nhiên của tập đoàn Nhật Huy trở thành thương hiệu uy tín và được thị trường các nước như: Mỹ, Úc, Châu Âu, Châu Á… ưa chuộng. Sản phẩm đá tự nhiên tại Viet Home Stone đa dạng với các biến thể của màu sắc, kiểu vân đá và kích thước. Nhà máy Viet Home Stone với tổng diện tích lên tới 45.000m2, sản lượng phát triển đều đặn với năng suất hiện tại đang là 50 conts / tháng.
+                        Sản phẩm chính của chúng tôi bao gồm: Đá cẩm thạch trắng tinh khiết, Đá cẩm thạch vàng, Đá paving, Đá ốp tường, Đá ong và Đá mỹ nghệ.
+                        Với mục tiêu: “Mang đến cho khách hàng những sản phẩm chất lượng nhất, giá thành cạnh tranh và dịch vụ tốt”, đá tự nhiên của tập đoàn Nhật Huy luôn sẵn sàng đáp ứng mọi thị trường quốc tế. Các đối tác của chúng tôi bao gồm chuỗi siêu thị Stone, nhà sản xuất, nhà thầu và các công ty Thương mại lớn. Hiện tại, Viet Home Stone cũng như Nhật Huy Group luôn mở rộng cơ hội hợp tác phát triển toàn diện cho các đối tác bằng những chính sách giá, chính sách đại lý hấp dẫn.
+                    </p>
+                    <a href="mathang.html">Bấm vào xem mặt hàng <i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/img/vhs-sample-05.jpg">
+                <div class="info">
+                    <h4>Animated Ice</h4>
+                    <p>
+                        Sản phẩm đá tự nhiên của tập đoàn Nhật Huy trở thành thương hiệu uy tín và được thị trường các nước như: Mỹ, Úc, Châu Âu, Châu Á… ưa chuộng. Sản phẩm đá tự nhiên tại Viet Home Stone đa dạng với các biến thể của màu sắc, kiểu vân đá và kích thước. Nhà máy Viet Home Stone với tổng diện tích lên tới 45.000m2, sản lượng phát triển đều đặn với năng suất hiện tại đang là 50 conts / tháng.
+                        Sản phẩm chính của chúng tôi bao gồm: Đá cẩm thạch trắng tinh khiết, Đá cẩm thạch vàng, Đá paving, Đá ốp tường, Đá ong và Đá mỹ nghệ.
+                        Với mục tiêu: “Mang đến cho khách hàng những sản phẩm chất lượng nhất, giá thành cạnh tranh và dịch vụ tốt”, đá tự nhiên của tập đoàn Nhật Huy luôn sẵn sàng đáp ứng mọi thị trường quốc tế. Các đối tác của chúng tôi bao gồm chuỗi siêu thị Stone, nhà sản xuất, nhà thầu và các công ty Thương mại lớn. Hiện tại, Viet Home Stone cũng như Nhật Huy Group luôn mở rộng cơ hội hợp tác phát triển toàn diện cho các đối tác bằng những chính sách giá, chính sách đại lý hấp dẫn.
+                    </p>
+                    <a href="mathang.html">Bấm vào xem mặt hàng <i class='bx bx-link-external'></i></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="feedback" id="feedback">
+        <h5>Clients Reviews</h5>
+        <h3>Customers Feedback</h3>
+        <div class="customers">
+            <div class="item">
+                <div class="rating">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                </div>
+                <p>
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique. Duis cursus, mi quis viverra.
+                </p>
+                <div class="user">
+                    <img src="assets/img/309181549_434232198813513_1418263637694919973_n.jpg">
+                    <div class="info">
+                        <h5>Dianne Russell</h5>
+                        <p>Starbucks</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="rating">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                </div>
+                <p>
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique. Duis cursus, mi quis viverra.
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique. Duis cursus, mi quis viverra.
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique. Duis cursus, mi quis viverra.
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique. Duis cursus, mi quis viverra.
+                </p>
+                <div class="user">
+                    <img src="assets/img/309181549_434232198813513_1418263637694919973_n.jpg">
+                    <div class="info">
+                        <h5>Kristian Watson</h5>
+                        <p>Louis Vuitton</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="rating">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                </div>
+                <p>
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique. Duis cursus, mi quis viverra.
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique. Duis cursus, mi quis viverra.
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique. Duis cursus, mi quis viverra.
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique. Duis cursus, mi quis viverra.
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum
+                    tristique. Duis cursus, mi quis viverra.
+                </p>
+                <div class="user">
+                    <img src="assets/img/309181549_434232198813513_1418263637694919973_n.jpg">
+                    <div class="info">
+                        <h5>Kathryn Murphy</h5>
+                        <p>McDonald's</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="top">
+            <div class="logo">
+                <img src="assets/img/logo.png">
+                <a href="https://github.com/nhathuynguyenhai1999/HTML-CSS-and-JS-F8-Case_Study">
+                    CÔNG TY TNHH MTV NHẬT HUY GROUP</a>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mathang.html">Mặt hàng</a></li>
+                <li><a href="lichsuphattrien.html">Lịch sử phát triển</a></li>
+                <li><a href="loichao.html">Lời chào</a></li>
+                <li><a href="tamnhinsumenh.html">Tầm nhìn sứ mệnh</a></li>
+            </ul>
+            <div class="social-links">
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+            </div>
+        </div>
+        <div class="separator"></div>
+        <div class="bottom">
+            <p>
+                Made With ❤️ By NHAT HUY GROUP
+            </p>
+            <div class="links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookies Setting</a>
+            </div>
         </div>
     </footer>
+
 
 </body>
 </html>
