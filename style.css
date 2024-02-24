@@ -40,7 +40,20 @@ nav{
     list-style: none;
     display: flex;
     align-items: center;
+    position: none;
     gap: 3rem;
+    margin: 25px;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    z-index: 1000;
+    width: calc(100% - 40px);
+}
+
+@media only screen and (min-width: 768px) {
+    .nav-links {
+        display: flex;
+    }
 }
 
 .link a{
