@@ -1,0 +1,1 @@
+ tradingview widget api in javascript. Also this code is fully responsive
