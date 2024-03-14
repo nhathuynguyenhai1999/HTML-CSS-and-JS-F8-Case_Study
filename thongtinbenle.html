@@ -23,7 +23,7 @@
         </div>
 
         <div class="card">
-            <img src="assets/img/logo.png">
+            <img src="assets/img/logo.png" alt="">
             <div class="info">
                 <h1>Tập đoàn Nhật Huy - Đối tác toàn cầu</h1>
                 <p>
@@ -169,7 +169,7 @@ function scrollToTop() {
 }
 
 window.addEventListener('scroll', function () {
-    var scrollTopButton = document.querySelector('.scroll-top');
+    const scrollTopButton = document.querySelector('.scroll-top');
     if (this.window.pageYOffset > 200) {
         scrollTopButton.style.display = 'block';
     } else {
